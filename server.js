@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser 	= require('body-parser');
-var Pusher = require('pusher');
+//var Pusher = require('pusher');
 var app = express();
 var items = ['apple','banana','pear'];
 
@@ -32,12 +32,12 @@ app.get('/api/items', function (req, res) {
 })
 
 
-var pusher = new Pusher({
+/*var pusher = new Pusher({
   appId: '231062',
   key: '8df5d579b734841c2a40',
   secret: '2998c88f423e2aa3da05',
   cluster: 'ap1'
-});
+});*/
 
 app.post('/api/items', function (req, res) {
 
@@ -50,7 +50,11 @@ app.post('/api/items', function (req, res) {
 
   // tell Pusher to trigger an 'updated' event on the 'items' channel
   // add pass the changed item to the event
-  pusher.trigger('items', 'updated', item);
+  
+  
+//pusher.trigger('items', 'updated', item);
+
+
 
   // respond with the changed item
   res.json(item);
