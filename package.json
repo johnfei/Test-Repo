@@ -1,0 +1,21 @@
+{
+  "name": "Test-Node-Express",
+  "description": "Test Node Express",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "http://c4digital.com.au",
+  "author": "John <john@c4digtialc.com.au>",
+  "dependencies": {
+    "express": "4.13.x",
+    "body-parser": "1.14.x"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --timeout 10000"
+  }
+}
